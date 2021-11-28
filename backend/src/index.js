@@ -11,8 +11,7 @@ app.get('/graphql', async (req, res) => {
         const response = await axios.post('https://cocohub.ai/graphql', {
             query: "{bot(id:113){firstName}}"
         }, {
-            headers: {
-                'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJ1c2VyX2lkIjoyNjYzLCJhdWQiOiJwb3N0Z3JhcGhpbGUifQ.31R0Fg-3XWlJtmEn66tR3A_T86XgjlAEdbE0WKj5p80'
+            
             }
         })
         // console.log('here')
