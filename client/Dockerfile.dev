@@ -5,5 +5,5 @@ RUN npx create-react-app cocohub -y
 RUN  rm -r cocohub/node_modules && mv cocohub/* . && mv cocohub/.[!.]* . \
     && npm install
 RUN cd /app
-RUN npm i react-draggable && npm i react-icons
+RUN npm i react-draggable && npm i react-icons && npm i axios && npm i react-loader-spinner
 CMD ["npm","start"]
