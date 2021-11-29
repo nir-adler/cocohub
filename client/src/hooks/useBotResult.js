@@ -1,12 +1,13 @@
 import * as React from 'react'
-import cocohubApi from '../api/cocohubApi'
+// import cocohubApi from '../api/cocohubApi'
+import axios from 'axios'
 
 export default () => {
     const [botName, setBotName] = React.useState(null)
     const [error, setError] = React.useState(null)
     const getBotName = async () => {
         try {
-            const response = await cocohubApi.get('/graphql')
+            const response = await axios.get('/graphql')
             // console.log(response.data)
             setBotName(response.data.bot.firstName)
         } catch (e) {

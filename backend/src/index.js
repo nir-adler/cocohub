@@ -11,7 +11,8 @@ app.get('/graphql', async (req, res) => {
         const response = await axios.post('https://cocohub.ai/graphql', {
             query: "{bot(id:113){firstName}}"
         }, {
-            
+            headers: {
+                'Authorization': process.env.COCOHUB_TOKEN
             }
         })
         // console.log('here')

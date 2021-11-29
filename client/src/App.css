@@ -1,56 +1,16 @@
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
-#main{
+#main {
   flex-direction: column;
   justify-content: space-between;
   background-color: #4C5B66;
   height: 100vh;
 }
 
-#top{
+#top {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   background-color: #243441;
   min-height: 60px;
-  /* border-bottom: 30px; */
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   align-items: center;
@@ -58,7 +18,7 @@
   padding-right: 30px;
 }
 
-#channels{
+#channels {
   display: flex;
   height: calc(20vw);
   width: 20vw;
@@ -68,13 +28,13 @@
   justify-content: space-between;
 }
 
-#channels p{
-  margin-left: 10px;
+#channels p {
+  margin-left: 1.8vw;
   font-weight: bold;
-  
+
 }
 
-#channels-connect{
+#channels-connect {
   text-align: center;
   display: flex;
   background-color: #2195F3;
@@ -82,33 +42,32 @@
   padding: 5px 0;
   border-radius: calc(5vw);
   justify-content: center;
-  color:#fff;
+  color: #fff;
   margin-bottom: 10px;
 }
 
-#channels-connect:hover{
+#channels-connect:hover {
   cursor: pointer;
 }
 
-#channels-container{
+#channels-container {
   display: flex;
   flex-direction: row;
 }
 
-#channels-icons{
+#channels-icons {
   padding-top: 10px;
   display: flex;
-  flex:1;
+  flex: 1;
   justify-content: space-around;
 }
 
-
-#sitelogo{
+#sitelogo {
   width: 14vw;
-  height:calc(2.2vw)
+  height: calc(2.2vw)
 }
 
-#help{
+#help {
   display: flex;
   height: calc(10vw);
   width: 35vw;
@@ -121,7 +80,7 @@
   color: #fff;
 }
 
-#help:after{
+#help:after {
   content: '';
   position: absolute;
   left: calc(34.1vw);
@@ -133,49 +92,41 @@
   border-top-right-radius: 5px;
 }
 
-
-#close-help{
+#close-help {
   position: absolute;
   bottom: calc(8vw);
   left: 1px;
 }
 
-#top-menu-right{
+#top-menu-right {
   display: flex;
   flex-direction: row;
   min-width: calc(10vw);
   justify-content: space-between;
 }
 
-
-#top-menu-right div{
-  color:#fff;
+#top-menu-right div {
+  color: #fff;
   font-size: 2vw;
 }
 
-
 @media screen and (max-width: 640px) {
-  #sitelogo{
+  #sitelogo {
     width: 40vw;
-    height:calc(6vw)
+    height: calc(6vw)
   }
-  #top-menu-right{
-    /* display: flex; */
-    /* flex-direction: row; */
+
+  #top-menu-right {
     min-width: calc(30vw);
-    /* justify-content: space-between; */
   }
-  #top-menu-right svg{
-    height:6vw;
-    width:6vw;
+
+  #top-menu-right svg {
+    height: 6vw;
+    width: 6vw;
   }
-  #top-menu-right div{
+
+  #top-menu-right div {
     font-size: 6vw;
-  }
-  #channels-container{
-    flex-direction: column;
-    align-items: center;
-    margin-top: 8px;
   }
 
   #help {
@@ -187,36 +138,47 @@
     min-height: 26vh;
   }
 
-  #channels{
+  #channels-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8px;
+  }
+
+  #channels {
     width: 95vw;
     height: 62vh;
     margin-top: 2vh;
     font-size: 7vw;
   }
 
-  #channels-icons{
-    flex:4;
+  #channels p {
+    margin-left: 9vw
+  }
+
+  #channels-icons {
+    flex: 4;
     padding-top: 11vh;
   }
 
-  #channels-icons svg{
-    height:11vw;
-    width:11vw;
+  #channels-icons svg {
+    height: 11vw;
+    width: 11vw;
   }
-  #channels-connect{
-    flex:1;
+
+  #channels-connect {
+    flex: 1;
     line-height: 8vh;
   }
 
 
-  #channels-icons svg{
-    height:11vw;
-    width:11vw;;
+  #channels-icons svg {
+    height: 11vw;
+    width: 11vw;
   }
 
   #close-help {
-    top: calc(8vh);
-    left: 3vw;
+    left: 9.9px;
+    bottom: calc(88.4vh);
   }
 
   #help:after {

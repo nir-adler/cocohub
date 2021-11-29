@@ -1,0 +1,22 @@
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - echo "cocohub"
+
+script:
+  - echo "cocohub"
+
+deploy:
+  provider: elasticbeanstalk
+  access_key_id: "$AWS_KEY"
+  secret_access_key: "$AWS_SECRET"
+  region: "eu-west-1"
+  app: "cocohub-app"
+  env: "Cocohubapp-env"
+  bucket_name: "elasticbeanstalk-eu-west-1-745665539209"
+  bucket_path: "cocohub-app"
+  on:
+    branch: master
