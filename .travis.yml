@@ -6,10 +6,12 @@ services:
 before_install:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t dogliy/cocohub-client ./client
+  - docker build -t dogliy/cocohub-nginx ./client
 
 after_success:
   - echo "after_success"
   - docker push dogliy/cocohub-client
+  - docker push dogliy/cocohub-nginx
 
 script:
   - echo "script"

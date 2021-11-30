@@ -5,18 +5,18 @@ services:
     mem_limit: 128m
     hostname: client
     image: dogliy/cocohub-client
+    # ports:
+    #   - 80:3000
+  nginx:
+    mem_limit: 128m
+    hostname: nginx
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
     ports:
-      - 80:3000
-  # nginx:
-  #   mem_limit: 128m
-  #   hostname: nginx
-  #   build:
-  #     context: ./nginx
-  #     dockerfile: Dockerfile
-  #   ports:
-  #     - 80:80  
-  #   depends_on:
-  #     - client
+      - 80:80  
+    depends_on:
+      - client
   #     - backend 
   # backend:
   #   mem_limit: 128m
