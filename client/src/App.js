@@ -18,6 +18,9 @@ function App() {
       setdndDisabled(window.matchMedia("(max-width: 640px)").matches)
     }
     window.matchMedia("(max-width: 640px)").addEventListener('change', handler)
+    if(window.innerWidth<700){
+      setdndDisabled(true)
+    }
   }, [])
 
   if (!dndDisabled) {
