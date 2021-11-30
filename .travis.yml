@@ -7,17 +7,18 @@ before_install:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t dogliy/cocohub-client ./client
   - docker build -t dogliy/cocohub-nginx ./nginx
+  - docker build -t dogliy/cocohub-backend ./backend
+
+script:
+  - echo "script"
 
 after_success:
   - echo "after_success"
   - docker push dogliy/cocohub-client
   - docker push dogliy/cocohub-nginx
+  - docker push dogliy/cocohub-backend
 
-script:
-  - echo "script"
   
-
-
 deploy:
   provider: elasticbeanstalk
   access_key_id: "$AWS_KEY"

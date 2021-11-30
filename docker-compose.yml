@@ -15,13 +15,13 @@ services:
       - 80:80  
     depends_on:
       - client
-  #     - backend 
-  # backend:
-  #   mem_limit: 128m
-  #   hostname: backend
-  #   build:
-  #     context: ./backend
-  #     dockerfile: Dockerfile
+      - backend 
+  backend:
+    mem_limit: 128m
+    hostname: backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
   
 
     
