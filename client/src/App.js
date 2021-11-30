@@ -13,10 +13,8 @@ function App() {
   const [botName, getBotName, error] = useBotResult()
   const [dndDisabled, setdndDisabled] = React.useState(false)
 
-
   React.useEffect(() => {
     const handler = (e) => {
-      // console.log(window.matchMedia("(max-width: 640px)").matches)
       setdndDisabled(window.matchMedia("(max-width: 640px)").matches)
     }
     window.matchMedia("(max-width: 640px)").addEventListener('change', handler)
@@ -63,8 +61,6 @@ function App() {
       {error ? <div>{error}</div> : null}
     </div>
   }
-
-
 }
 
 export default App

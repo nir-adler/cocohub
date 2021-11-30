@@ -6,6 +6,8 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
+console.log(process.env.COCOHUB_TOKEN)
+
 app.get('/graphql', async (req, res) => {
     try {
         const response = await axios.post('https://cocohub.ai/graphql', {
@@ -20,8 +22,6 @@ app.get('/graphql', async (req, res) => {
         res.status(500).send(e.message)
     }
 })
-
-
 
 app.listen(8081, () => {
     console.log('Server up on port 8081')

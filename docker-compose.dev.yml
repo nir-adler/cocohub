@@ -1,6 +1,5 @@
 version: '3'
 
-
 services:
   client:
     build: 
@@ -16,7 +15,6 @@ services:
     volumes:
       - /app/node_modules
       - ./backend:/app
-
   nginx:
     build:
       context: ./nginx

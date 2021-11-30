@@ -10,15 +10,10 @@ before_install:
   - docker build -t dogliy/cocohub-backend ./backend
 
 script:
-  - echo "script"
-
-after_success:
-  - echo "after_success"
   - docker push dogliy/cocohub-client
   - docker push dogliy/cocohub-nginx
   - docker push dogliy/cocohub-backend
 
-  
 deploy:
   provider: elasticbeanstalk
   access_key_id: "$AWS_KEY"
