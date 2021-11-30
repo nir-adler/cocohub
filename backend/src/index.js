@@ -6,10 +6,6 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-console.log(process.env.COCOHUB_TOKEN)
-console.log(process.env.NIR_ADLER)
-console.log(process.env)
-
 app.get('/graphql', async (req, res) => {
     try {
         const response = await axios.post('https://cocohub.ai/graphql', {

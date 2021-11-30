@@ -22,7 +22,7 @@ services:
       dockerfile: Dockerfile
     environment:
       - COCOHUB_TOKEN=$COCOHUB_TOKEN
-      - NIR_ADLER=1234
+
       
     
   
