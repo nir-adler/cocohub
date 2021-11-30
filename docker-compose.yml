@@ -10,8 +10,7 @@ services:
   nginx:
     mem_limit: 128m
     hostname: nginx
-    build:
-      image: dogliy/cocohub-nginx
+    image: dogliy/cocohub-nginx
     ports:
       - 80:80  
     depends_on:
