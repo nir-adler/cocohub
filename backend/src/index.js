@@ -15,16 +15,8 @@ app.get('/graphql', async (req, res) => {
                 'Authorization': process.env.COCOHUB_TOKEN
             }
         })
-        // console.log('here')
-
         res.send(response.data.data)
     } catch (e) {
-        // console.log('error')
-        // console.log(e)
-        // console.log(e.code)
-        // console.log(e.name)
-        // console.log(e.message)
-
         res.status(500).send(e.message)
     }
 })
