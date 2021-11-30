@@ -11,8 +11,7 @@ services:
     mem_limit: 128m
     hostname: nginx
     build:
-      context: ./nginx
-      dockerfile: Dockerfile
+      image: dogliy/cocohub-nginx
     ports:
       - 80:80  
     depends_on:
