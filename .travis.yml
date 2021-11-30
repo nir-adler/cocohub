@@ -4,10 +4,17 @@ services:
   - docker
 
 before_install:
-  - echo "cocohub"
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker build -t dogliy/cocohub-client ./client
+
+after_success:
+  - echo "after_success"
+  - docker push dogliy/cocohub-client
 
 script:
-  - echo "cocohub"
+  - echo "script"
+  
+
 
 deploy:
   provider: elasticbeanstalk
